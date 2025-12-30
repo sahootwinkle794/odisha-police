@@ -324,7 +324,7 @@ ul.nav.nav-pills {
 }
 
 .navbar.sticky .logo {
-  width: 200px;
+  width: 60px;
   transition: width 0.3s ease;
 }
 
@@ -854,11 +854,11 @@ p.dir2-p.aos-init.aos-animate {
 
 .glance-h2 {
   font-size: 60px;
-  color: #ebeeef;
+  color: #dcdcdc8c;
   font-family: "Oswald", serif;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 25px;
   position: relative;
   top: 60px;
   text-align: center;
@@ -942,8 +942,8 @@ p.dir2-p.aos-init.aos-animate {
 
 .slick-prev.glance-sec-prev,
 .slick-next.glance-sec-next {
-  color: #f24e1e !important;
-  border: 1px solid #f24e1e !important;
+  color: #4D33E0 !important;
+  border: 1px solid #4D33E0 !important;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -952,7 +952,7 @@ p.dir2-p.aos-init.aos-animate {
 
 .slick-prev.glance-sec-prev:hover,
 .slick-next.glance-sec-next:hover {
-  background-color: #f24e1e;
+  background-color: #4D33E0;
   color: white !important;
 }
 
@@ -1110,8 +1110,8 @@ p.dir2-p.aos-init.aos-animate {
 
 .slick-prev.news-sec-prev,
 .slick-next.news-sec-next {
-  color: #f24e1e !important;
-  border: 1px solid #f24e1e !important;
+  color: #4D33E0 !important;
+  border: 1px solid #4D33E0 !important;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -1121,7 +1121,7 @@ p.dir2-p.aos-init.aos-animate {
 
 .slick-prev.news-sec-prev:hover,
 .slick-next.news-sec-next:hover {
-  background-color: #f24e1e;
+  background-color: #4D33E0;
   color: white !important;
 }
 
@@ -1176,8 +1176,8 @@ p.dir2-p.aos-init.aos-animate {
 
 .slick-prev.eve-sec-prev,
 .slick-next.eve-sec-next {
-  color: #f24e1e !important;
-  border: 1px solid #f24e1e !important;
+  color: #4D33E0 !important;
+  border: 1px solid #4D33E0 !important;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -1187,7 +1187,7 @@ p.dir2-p.aos-init.aos-animate {
 
 .slick-prev.eve-sec-prev:hover,
 .slick-next.eve-sec-next:hover {
-  background-color: #f24e1e;
+  background-color: #4D33E0;
   color: white !important;
 }
 
@@ -1459,8 +1459,8 @@ section.eve-sec.slider.slick-initialized.slick-slider {
 
 .slick-prev.gall-sec-prev,
 .slick-next.gall-sec-next {
-  color: #f24e1e !important;
-  border: 1px solid #f24e1e !important;
+  color: #4D33E0 !important;
+  border: 1px solid #4D33E0 !important;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -1470,7 +1470,7 @@ section.eve-sec.slider.slick-initialized.slick-slider {
 
 .slick-prev.gall-sec-prev:hover,
 .slick-next.gall-sec-next:hover {
-  background-color: #f24e1e;
+  background-color: #4D33E0;
   color: white !important;
 }
 
@@ -1525,7 +1525,7 @@ section.gall {
 
 section.gall-sec.slider.slick-initialized.slick-slider {
   padding-top: 40px;
-  border-top: 1px solid #e6582d;
+  /* border-top: 1px solid #e6582d; */
 }
 
 .gall-icon {
@@ -1536,7 +1536,7 @@ section.gall-sec.slider.slick-initialized.slick-slider {
 .gall-text2 {
   color: black;
   font-size: 55px;
-  margin-bottom: 85px;
+  margin-bottom: 20px;
 }
 
 .gall-text1 {
@@ -1567,7 +1567,7 @@ section.gall-sec.slider.slick-initialized.slick-slider {
 }
 
 .card.gall-card:hover {
-  background: linear-gradient(135deg, #33669B, #23376D, #F15A29, #23376D, #33669B);
+  background: linear-gradient(135deg, #2D1F77, #23376D, #0d6efd, #47236d, #33669B);
   background-size: 400% 400%;
   animation: gradientAnimation 5s ease forwards;
   /* transform: scale(1.05);  */
@@ -1619,7 +1619,7 @@ section.gall-sec.slider.slick-initialized.slick-slider {
   /* Ensure the animation stays inside the button */
 }
 
-.media-tab-button::before {
+/* .media-tab-button::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1628,10 +1628,9 @@ section.gall-sec.slider.slick-initialized.slick-slider {
   height: 3px;
   background-color: #e6582d;
   transform: scaleX(0);
-  /* Start from 0 width */
   transform-origin: bottom right;
   transition: transform 0.3s ease;
-}
+} */
 
 .media-tab-button:hover::before,
 .media-tab-button.active::before {
@@ -1640,16 +1639,18 @@ section.gall-sec.slider.slick-initialized.slick-slider {
   transform-origin: bottom left;
 }
 
-.media-tab-button:hover {
-  color: #e6582d;
-  background: none;
+.media-tab-button:hover,.media-tab-button.active:hover {
+  color: white;
+  background-image: linear-gradient(to left, #4D33E0, #2023AC);
 }
 
 .media-tab-button.active {
-  color: #e6582d;
-  background: none;
+  color: white;
+  background-image: linear-gradient(to right, #4D33E0, #2023AC);
 }
-
+.media-tab-button{
+  border: 2px solid #4D33E0;
+}
 /* .media-tab-button {
   padding: 19px 71px;
   margin-right: 2px;
@@ -1724,8 +1725,8 @@ section.gall-sec.slider.slick-initialized.slick-slider {
 
 .slick-prev.agr-cards-prev,
 .slick-next.agr-cards-next {
-  color: #f24e1e !important;
-  border: 1px solid #f24e1e !important;
+  color: #4D33E0 !important;
+  border: 1px solid #4D33E0 !important;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -1735,7 +1736,7 @@ section.gall-sec.slider.slick-initialized.slick-slider {
 
 .slick-prev.agr-cards-prev:hover,
 .slick-next.agr-cards-next:hover {
-  background-color: #f24e1e;
+  background-color: #4D33E0;
   color: white !important;
 }
 
@@ -3000,7 +3001,7 @@ img.gen-6.img-fluid {
 }
 
 .download-btn {
-  color: #f24e1e;
+  color: #4D33E0;
   text-decoration: none;
   font-size: 12px;
   display: flex;
@@ -3029,7 +3030,7 @@ section.emp-corner {
 }
 
 .contact-details-card i {
-  color: #f24e1e;
+  color: #4D33E0;
 }
 
 .contact-details {
@@ -3089,7 +3090,7 @@ section.emp-corner {
 }
 
 .reach-h3 {
-  color: #f24e1e;
+  color: #4D33E0;
 }
 
 .contact-form {
@@ -3173,7 +3174,7 @@ section.emp-corner {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(#23366a, #f24e1e);
+  background: linear-gradient(#23366a, #4D33E0);
   position: absolute;
   left: 0%;
   top: -98%;
@@ -3219,7 +3220,7 @@ section.emp-corner {
 
 .service-card .icon-wrapper {
   background-color: #ffffff;
-  color: #f24e1e;
+  color: #4D33E0;
 }
 
 .advertisers-service-sec .service-card:hover .icon-wrapper {
@@ -3649,7 +3650,7 @@ h6.profile-title {
 
 .contact-img,
 .director-img {
-  --color: #F24E1E;
+  --color: #4D33E0;
   --border: 2px;
   --offset: 20px;
   --gap: 5px;
