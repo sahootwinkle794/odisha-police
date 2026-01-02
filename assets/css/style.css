@@ -160,9 +160,11 @@ p {
 }
 
 .skip-ul span a {
-    color: white;
+    color: black;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 18px;
+    margin-left: 24px;
+    text-align: center;
 }
 
 .skip-ul span a:hover,
@@ -246,11 +248,23 @@ h3.light-logo{
     margin: 0px;
     color: black;
 }
+.home-icon{
+    width: 30px;
+    height: 30px;
+    padding-bottom: 10px !important;
+}
+.home-a{
+    padding-bottom: 0px !important;
+}
 .amb-img {
     border: 2px solid #945029;
     border-radius: 50px;
     border-style: dashed;
     padding: 4px;
+}
+.amb-img img {
+    width: 75px;
+    height: 75px;
 }
 .emer-div.col-12.col-lg-auto.mb-3.mb-lg-0 {
     display: flex;
@@ -383,7 +397,11 @@ h3.light-txt2 {
     padding: 0;
     margin: 0;
 }
-
+.line{
+    background-color: #F8D3C5;
+    width: 1px;
+    height: 62px;
+}
 /* a.read-btn {
     padding: 20px 60px;
     border-radius: 50px;
