@@ -5,7 +5,7 @@ h6,
 p {
     font-family: "Outfit", sans-serif;
 }
-.main-nav,.navbar3,.banner,.announcement-container,.director,.annum-report,.footer,.copy-right {
+.main-nav,.navbar3,.banner,.announcement-container,.director,.annum-report,.data-tab,.footer,.copy-right {
     float: left;
     width: 100%;
 }
@@ -922,7 +922,7 @@ img.rural-img {
 /* annual-report section end  */
 /* tab content style start  */
 .data-tab {
-    background-image: url('../../assets/images/mask.svg');
+    background-image: url('../../assets/images/bg-img/tab-bg.png');
     width: 100%;
     height: auto;
     background-position: left;
@@ -939,7 +939,7 @@ img.rural-img {
     display: inline-block;
     padding: 15px 48px;
     cursor: pointer;
-    border: 1px solid #F15A29;
+    border: 1px solid #674CFF;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -947,22 +947,24 @@ img.rural-img {
 .tab p {
     padding: 0;
     margin: 0;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 18px;
+    color: #4D4D4D;
 }
 
 .tab:hover,
-.tab.active:hover {
-    background-color: #0d3a5c;
-    border: 1px solid #0d3a5c;
+.tab.active:hover,.tab p:hover {
+   background-image: linear-gradient(to right, #4346E9, #8847C2);
     color: white;
 }
 
 .tab.active {
-    background-color: #E15617;
+    background-image: linear-gradient(to left, #4346E9, #8847C2);
+    color: white !important;
+}
+.tab.active p{
     color: white;
 }
-
 .tab-content {
     display: none;
     margin-top: 10px;
