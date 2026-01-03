@@ -953,7 +953,7 @@ img.rural-img {
 }
 
 .tab:hover,
-.tab.active:hover,.tab p:hover {
+.tab.active:hover {
    background-image: linear-gradient(to right, #4346E9, #8847C2);
     color: white;
 }

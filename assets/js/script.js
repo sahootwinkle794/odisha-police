@@ -29,6 +29,20 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).classList.add("active");
     evt.currentTarget.classList.add("active");
 }
+
+
+function openMyTab(evt, tabId) {
+    const tabs = evt.currentTarget.parentElement.querySelectorAll('.my-tab');
+    const contents = document.querySelectorAll('.my-tab-content');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    contents.forEach(content => content.classList.remove('active'));
+
+    evt.currentTarget.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
+
+
 // ---------------------------------------------------- tab content script end -------------------------------------------
 // ---------------------------------------------------- owl annum card slider start ---------------------------------------------------- 
  function initResponsiveCarousel() {

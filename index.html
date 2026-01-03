@@ -19,6 +19,75 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Nova+Mono&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <style>
+        /* Tab header wrapper */
+        .my-tabs {
+            display: flex;
+            gap: 2px;
+        }
+
+        /* Tab button */
+        .my-tab {
+            display: inline-block;
+            padding: 15px 48px;
+            cursor: pointer;
+            border: 1px solid #CDE6FF;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background: #fff;
+        }
+
+        /* Tab text */
+        .my-tab span {
+            font-weight: 500;
+            font-size: 18px;
+            color: #4D4D4D;
+        }
+
+        /* Hover */
+        .my-tab:hover,
+        .my-tab.active:hover {
+            background-image: linear-gradient(to right, #b1b87b, #f7eab2);
+        }
+
+        .my-tab:hover span {
+            color: #fff !important;
+        }
+
+        /* Active tab */
+        .my-tab.active {
+            background-color: black;
+        }
+
+        .my-tab.active span {
+            color: #fff;
+        }
+
+        /* Content area */
+        .my-tab-content {
+            display: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        span.fb-text {
+            color: #1877F2;
+        }
+
+        span.insta-text {
+            background: linear-gradient(to right, #A71AE9, #FF4602);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Active content */
+        .my-tab-content.active {
+            display: block;
+        }
+    </style>
 
 </head>
 
@@ -640,103 +709,36 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="tab-name">
-                        <div class="tab active" onclick="openTab(event, 'tab1')">
-                            <p>Twitter</p>
+                    <div class="my-tabs">
+                        <div class="my-tab active" onclick="openMyTab(event, 'myTab1')">
+                            <span>Twitter</span>
                         </div>
-                        <div class="tab" onclick="openTab(event, 'tab2')">
-                            <p>Facebook</p>
+                        <div class="my-tab" onclick="openMyTab(event, 'myTab2')">
+                            <span class="fb-text">Facebook</span>
                         </div>
-                        <div class="tab" onclick="openTab(event, 'tab3')">
-                            <p>Instagram</p>
+                        <div class="my-tab" onclick="openMyTab(event, 'myTab3')">
+                            <span class="insta-text">Instagram</span>
+                        </div>
+                    </div>
+
+                    <div id="myTab1" class="my-tab-content active">
+                        <div class="card">
+                            <img src="assets/images/bg-img/twitt.png" alt="">
                         </div>
 
                     </div>
 
-                    <div id="tab1" class="tab-content active">
-                       <div class="card">
-                        <img src="assets/images/bg-img/twitt.png" alt="">
-                       </div>
-                        <a href="#" type="button" class="viewall-btn">View All</a>
+                    <div id="myTab2" class="my-tab-content">
+                        <div class="card">
+                            <img src="assets/images/bg-img/twitt.png" alt="">
+                        </div>
                     </div>
-                    <div id="tab2" class="tab-content">
-                        <div class="card tab-card">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="date-card badge">
-                                        <img src="assets/images/date.svg" alt="date">
-                                        <span>19 Jan 2025</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="tab-txt">
-                                        <p>List of Shortlisted Candidates for Interview (AcSir ICMR Ph.D. Program
-                                            (Medical
-                                            Research)
-                                            – August 2024 Session)</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div id="myTab3" class="my-tab-content">
+                        <div class="card">
+                            <img src="assets/images/bg-img/twitt.png" alt="">
                         </div>
-                        <div class="card tab-card">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="date-card badge">
-                                        <img src="assets/images/date.svg" alt="date">
-                                        <span>19 Jan 2025</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="tab-txt">
-                                        <p>List of Shortlisted Candidates for Interview (AcSir ICMR Ph.D. Program
-                                            (Medical
-                                            Research)
-                                            – August 2024 Session)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" type="button" class="viewall-btn">View All</a>
                     </div>
-                    <div id="tab3" class="tab-content">
-                        <div class="card tab-card">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="date-card badge">
-                                        <img src="assets/images/date.svg" alt="date">
-                                        <span>19 Jan 2025</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="tab-txt">
-                                        <p>List of Shortlisted Candidates for Interview (AcSir ICMR Ph.D. Program
-                                            (Medical
-                                            Research)
-                                            – August 2024 Session)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card tab-card">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="date-card badge">
-                                        <img src="assets/images/date.svg" alt="date">
-                                        <span>19 Jan 2025</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="tab-txt">
-                                        <p>List of Shortlisted Candidates for Interview (AcSir ICMR Ph.D. Program
-                                            (Medical
-                                            Research)
-                                            – August 2024 Session)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" type="button" class="viewall-btn">View All</a>
-                    </div>
+
                 </div>
             </div>
         </div>
