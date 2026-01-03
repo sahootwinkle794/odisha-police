@@ -5,7 +5,10 @@ h6,
 p {
     font-family: "Outfit", sans-serif;
 }
-
+.main-nav,.navbar3,.banner,.announcement-container,.director,.annum-report,.footer,.copy-right {
+    float: left;
+    width: 100%;
+}
 /* owl slider css start  */
 .banner-owl-carousel {
     position: relative;
@@ -412,9 +415,10 @@ a.nav-link.active {
 
 /* nav3 end  */
 /* banner section start  */
-.banner{
+.banner {
     position: relative;
 }
+
 .fixed {
     position: fixed;
     top: 40%;
@@ -451,7 +455,7 @@ a.nav-link.active {
 .buttonDiv:hover {
     background: #fff;
     margin-right: -20px;
-     background: linear-gradient(45deg, #fda582, #f7cf68);
+    background: linear-gradient(45deg, #fda582, #f7cf68);
 }
 
 
@@ -567,6 +571,7 @@ a.read-btn:hover {
     background: linear-gradient(to right, #F15A29, #FFB464);
     color: white;
 }
+
 .read-text {
     color: #05D1FF;
 }
@@ -580,7 +585,6 @@ a.read-btn:hover {
     border: 1px solid #3A3EAF;
     overflow: hidden;
     height: 50px;
-    margin-bottom: 80px;
 }
 
 .announcement-icon {
@@ -650,6 +654,168 @@ a.read-btn:hover {
 
 /* announcement section end  */
 /* director section start  */
+.director {
+    background-image: url('../../assets/images/bg-img/layer-1.png');
+    background-color: #FFF8F4;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding: 80px 0px;
+    padding-top: 0px;
+}
+.police-card.card{
+    background-image: url('../../assets/images/bg-img/card-bg.png');
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    border: 2px solid #F0B064;
+    padding: 25px;
+}
+.text-line{
+    background-color: #DBDBDB;
+    height: 1px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.city-card.card {
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    max-height: 184px;
+    overflow: hidden;
+    background: #fff;
+    transition: color 0.4s ease;
+}
+
+/* Gradient layer */
+.city-card.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        #CC136C,
+        #F15929
+    );
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+/* Hover animation */
+.city-card.card:hover::before {
+    transform: translateX(0);
+}
+
+.city-card.card:hover {
+    color: #fff;
+}
+
+/* Content above gradient */
+.city-card.card > * {
+    position: relative;
+    z-index: 1;
+}
+.city-card.card img {
+    transition: filter 0.4s ease;
+}
+
+.city-card.card:hover img {
+    filter: brightness(0) invert(1);
+}
+.city-card.card:hover p {
+    color: white;
+}
+.city-p{
+    font-size: 14px;
+    color: #F15A29;
+}
+.learn-p{
+    font-size: 12px;
+}
+.learn-p {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Arrow image after text */
+.learn-p::after {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 16px;
+    margin-left: 8px;
+    background-image: url('../../assets/images/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: filter 0.3s ease;
+}
+
+/* On hover */
+.city-card.card:hover .learn-p::after {
+    filter: brightness(0) invert(1);
+}
+
+.dir-card {
+    /* background-image: url('../../assets/images/bg-img/layer-2.png'); */
+    background-color: #091560b9;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    float: left;
+    width: 100%;
+    padding: 60px 0px;
+}
+.citizen{
+    float: left !important;
+    width: 100% !important;
+    padding-top: 40px;
+    text-align: center;
+}
+.col-md-3.citizen-col {
+    position: relative;
+}
+
+/* Vertical separator line */
+.col-md-3.citizen-col::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 1px;
+    height: 80%;
+    background-color: #F0B064;
+}
+img.rural-img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+.citizen h3{
+    color: white;
+    text-align: center;
+}
+.citizen-h3 {
+    font-family: "Geist", sans-serif;
+    font-size: 55px;
+    font-weight: 100;
+}
+.card-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-con {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .light-txt {
     font-weight: 200;
 }
@@ -662,10 +828,6 @@ a.read-btn:hover {
     margin-bottom: 20px;
     color: #000000;
     font-weight: 700;
-}
-
-.director {
-    margin-bottom: 80px;
 }
 
 .card.dir-card {
@@ -721,84 +883,42 @@ a.read-btn:hover {
 /* annual-report section start  */
 
 .annum-report {
-    background-image: url('../../assets/images/annum-bg.png');
-    background-color: #364A72;
+    background-image: url('../../assets/images/bg-img/achivment-layer.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #513672;
     padding: 100px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    text-align: center;
 
 }
-
-.card.annum-card {
-    background-color: #0D3A5C;
-    padding: 10px;
-    border-radius: 10px;
-    min-height: 196px;
-}
-
-.ann-count {
-    font-weight: 700;
+.annum-report h3{
     color: white;
-    font-size: 30px;
-    opacity: 0.3;
 }
 
-.ann-number {
-    font-weight: 700;
-    color: white;
-    font-size: 25px;
-}
-
-.ann-icon {
-    width: 55px;
-}
-
-.ann-top {
+.achv-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
 }
-
-.ann-txt {
-    font-size: 17px;
+.circle-shape {
+    background-color: #F15929;
+    border-radius: 50px;
+    padding: 13px;
+}
+.achv-text {
     color: white;
-    font-weight: 200;
-    z-index: 1;
+    text-align: start;
+    margin-left: 10px;
 }
-
-.annum-card::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 90px 90px;
-    border-color: transparent transparent #97DDE8 transparent;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    border-bottom-right-radius: 10px;
+.achv-text p{
+    font-size: 14px;
+    margin: 0px;
 }
-
-.annum-card:hover {
-    background-color: #ffffff;
+.circle-shape img{
+    width: 38px;
+    height: 38px;
 }
-
-.annum-card:hover::after {
-    opacity: 1;
-}
-
-.annum-card:hover h6,
-.annum-card:hover p {
-    color: #1B5D8E;
-}
-
-.annum-card:hover .ann-icon {
-    filter: brightness(0) saturate(100%) invert(20%) sepia(76%) saturate(743%) hue-rotate(180deg) brightness(90%) contrast(85%);
-}
-
 /* annual-report section end  */
 /* tab content style start  */
 .data-tab {
