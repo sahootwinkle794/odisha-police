@@ -5,8 +5,7 @@
 }
 
 #cssmenu>ul>li {
-    margin-right: 17px !important;
-    /* adjust as needed */
+    margin-right: 0px !important;
 }
 
 /* Optional: remove right margin on last item */
