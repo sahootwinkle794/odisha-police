@@ -105,6 +105,10 @@
         padding: 15px 22px !important;
     }
 
+    .logo-card img {
+        height: 100px !important;
+    }
+
     .my-tabs {
         margin-top: 56px;
         padding: 15px 2px !important;
@@ -120,7 +124,11 @@
     }
 
     .angled-bar {
-        height: 212px !important;
+        height: 191px !important;
+    }
+
+    section.gall {
+        margin-bottom: 50px;
     }
 
     .col-md-3.citizen-col {
