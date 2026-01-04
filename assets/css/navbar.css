@@ -3,7 +3,9 @@
     padding: 0;
     text-decoration: none;
 }
-
+#cssmenu>ul>li>a>.underline{
+    font-family: "Outfit", sans-serif;
+}
 #cssmenu>ul>li {
     margin-right: 0px !important;
 }
