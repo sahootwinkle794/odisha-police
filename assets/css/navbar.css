@@ -145,7 +145,7 @@ nav {
     left: -9999px;
     border: 2px solid rgb(255, 255, 255);
     background-color: #4346e9;
-    z-index: 1 !important;
+    z-index: 999 !important;
     color: black;
 }
 

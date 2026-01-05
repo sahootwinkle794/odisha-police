@@ -1,12 +1,31 @@
 // ---------------------------------------------------- banner slider start -------------------------------------------
-$('.banner-owl-carousel').owlCarousel({
+var owl = $('.banner-owl-carousel');
+
+owl.owlCarousel({
     loop: true,
     margin: 10,
     items: 1,
     nav: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
     animateOut: 'slideOutUp',
     animateIn: 'slideInUp'
-})
+});
+
+var isPlaying = true;
+
+$('#carouselToggle').on('click', function () {
+    if (isPlaying) {
+        owl.trigger('stop.owl.autoplay');
+        $(this).removeClass('pause').addClass('play').html('▶ Play');
+    } else {
+        owl.trigger('play.owl.autoplay', [4000]);
+        $(this).removeClass('play').addClass('pause').html('⏸ Pause');
+    }
+    isPlaying = !isPlaying;
+});
+
 // ------------------------------------------- banner slider end -------------------------------------------
 // ---------------------------------------------------- tab content script start -------------------------------------------
 
