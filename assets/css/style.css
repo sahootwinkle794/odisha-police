@@ -245,7 +245,7 @@ a.nav-link.link-dark {
     padding: 4px;
     padding-left: 10px;
     margin-top: 2px;
-    margin-left: 112px;
+    margin-left: 31px;
 }
 
 .search-container input[type=text] {
@@ -593,8 +593,10 @@ a.read-btn:hover {
     color: white;
 }
 
-.read-text {
-    color: #05D1FF;
+a.read-text {
+    color: #ff6905;
+    font-weight: 500;
+    text-decoration: none !important;
 }
 
 /* banner section end  */
@@ -607,8 +609,18 @@ a.read-btn:hover {
     overflow: hidden;
     height: 50px;
 }
-.card-con p{
+
+.card-con p {
     font-family: "Roboto", sans-serif;
+}
+
+a.link-con {
+    text-decoration: none !important;
+    color: black;
+}
+
+a.link-con:hover {
+    color: white;
 }
 
 .announcement-icon {
@@ -728,6 +740,10 @@ a.read-btn:hover {
     font-weight: 600;
 }
 
+.police-card a:hover {
+    color: white !important;
+}
+
 /* keep content above overlay */
 .police-card.card>* {
     position: relative;
@@ -788,19 +804,23 @@ a.read-btn:hover {
     filter: brightness(0) invert(1);
 }
 
-.city-card.card:hover p {
+.city-card.card:hover p,.city-card.card:hover a {
     color: white;
 }
 
 .city-p {
-    font-size: 14px;
+    font-size: 13px;
     color: #F15A29;
 }
 
-.learn-p {
+a.learn-p {
+    text-decoration: none;
     font-size: 12px;
+    color: black;
 }
-
+a.learn-p:hover{
+    color: yellow !important;
+}
 .learn-p {
     position: relative;
     display: inline-flex;
@@ -1352,6 +1372,10 @@ footer {
     margin-bottom: 20px;
 }
 
+.social-shape:hover {
+    background-color: #613a03;
+}
+
 .auto-multi-carousel .owl-dot {
     display: none !important;
 }
@@ -1872,3 +1896,72 @@ div#vdos-btn {
 
 
 /* footer section end  */
+
+
+/* Tab header wrapper */
+.my-tabs {
+    display: flex;
+    gap: 2px;
+}
+
+/* Tab button */
+.my-tab {
+    display: inline-block;
+    padding: 15px 48px;
+    cursor: pointer;
+    border: 1px solid #CDE6FF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #fff;
+}
+
+/* Tab text */
+.my-tab span {
+    font-weight: 500;
+    font-size: 18px;
+    color: #4D4D4D;
+}
+
+/* Hover */
+.my-tab:hover,
+.my-tab.active:hover {
+    background-image: linear-gradient(to right, #b1b87b, #f7eab2);
+}
+
+.my-tab:hover span {
+    color: #fff !important;
+}
+
+/* Active tab */
+.my-tab.active {
+    background-color: black;
+}
+
+.my-tab.active span {
+    color: #fff;
+}
+
+/* Content area */
+.my-tab-content {
+    display: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+span.fb-text {
+    color: #1877F2;
+}
+
+span.insta-text {
+    background: linear-gradient(to right, #A71AE9, #FF4602);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Active content */
+.my-tab-content.active {
+    display: block;
+}

@@ -1003,15 +1003,17 @@
         width: 70%;
     }
     .search-container {
-        margin-left: 13px;
+        margin-left: 23px;
     }
-
+    #cssmenu>ul>li>a{
+        font-size: 12px;
+    }
     #cssmenu>ul>li {
         margin: 0px !important;
     }
 
     #cssmenu>ul>li.has-sub>a {
-        padding-right: 52px;
+        padding-right: 25px;
     }
 
     #cssmenu>ul>li>a {
