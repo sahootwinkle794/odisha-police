@@ -1,32 +1,81 @@
 // ---------------------------------------------------- banner slider start -------------------------------------------
 var owl = $('.banner-owl-carousel');
+var direction = 'next';
+var isPlaying = true;
 
+/* Detect arrow direction */
+$(document).on('click', '.owl-prev', function () {
+    direction = 'prev';   // ⬆️ upward
+});
+
+$(document).on('click', '.owl-next', function () {
+    direction = 'next';   // ⬇️ downward
+});
+
+/* Init */
 owl.owlCarousel({
-    loop: true,
-    margin: 10,
     items: 1,
+    loop: true,
     nav: true,
+    dots: false,
     autoplay: true,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
-    animateOut: 'slideOutUp',
-    animateIn: 'slideInUp'
+    smartSpeed: 600
 });
 
-var isPlaying = true;
+/* Remove old animation */
+owl.on('translate.owl.carousel', function () {
+    $('.owl-item .item')
+        .removeClass('slide-out-up slide-in-up slide-out-down slide-in-down');
 
+    if (direction === 'prev') {
+        $('.owl-item.active .item').addClass('slide-out-up');
+    } else {
+        $('.owl-item.active .item').addClass('slide-out-down');
+    }
+});
+
+/* Apply incoming animation */
+owl.on('translated.owl.carousel', function () {
+    if (direction === 'prev') {
+        $('.owl-item.active .item').addClass('slide-in-up');
+    } else {
+        $('.owl-item.active .item').addClass('slide-in-down');
+    }
+});
+
+/* Play / Pause */
 $('#carouselToggle').on('click', function () {
     if (isPlaying) {
         owl.trigger('stop.owl.autoplay');
-        $(this).removeClass('pause').addClass('play').html('▶ Play');
+        $(this).html('▶ Play');
     } else {
         owl.trigger('play.owl.autoplay', [4000]);
-        $(this).removeClass('play').addClass('pause').html('⏸ Pause');
+        $(this).html('⏸ Pause');
     }
     isPlaying = !isPlaying;
 });
 
+
 // ------------------------------------------- banner slider end -------------------------------------------
+// brown banner portion start 
+$('.brown-slider').owlCarousel({
+  items: 1,
+  loop: true,
+  nav: true,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  autoplayHoverPause: true,
+  animateOut: 'fadeOut',
+  animateIn: 'fadeIn'
+});
+
+
+
+
+// brown banner portion end 
 // ---------------------------------------------------- tab content script start -------------------------------------------
 
 function openTab(evt, tabName) {

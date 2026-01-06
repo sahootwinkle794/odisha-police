@@ -22,27 +22,72 @@
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Nova+Mono&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <style>
-        .carousel-btn {
-
-            margin-top: 10px;
-            margin-left: 160px;
-            z-index: 999;
-            padding: 13px 18px;
-            background: #ef3bff;
-            color: #fff;
-            border: none;
-            border-radius: 7px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: 0.3s;
+        .main-banner {
+            position: relative;
+            width: 100%;
+            display: flex;
         }
 
-        .carousel-btn.play {
-            background: #2ecc71;
+        /* LEFT SIDE */
+        .banner-left {
+            width: 100%;
         }
 
-        .carousel-btn:hover {
-            opacity: 0.85;
+        /* RIGHT SIDE (BROWN WITH ANGLE) */
+        .banner-right {
+            width: 5%;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(30% 0,
+                    100% 0,
+                    100% 100%,
+                    5% 100%);
+        }
+
+        .slide-con {
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(33% 0,
+                    100% 0,
+                    100% 100%,
+                    28% 100%);
+
+        }
+
+
+        /* Slider Fix */
+        .brown-slider,
+        .brown-slider .item,
+        .brown-slider img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .brown-slider img {
+            object-fit: cover;
+        }
+
+        .banner-row {
+            position: relative;
+            /* min-height: 100vh; */
+            /* or banner height */
+        }
+
+        .banner-owl-carousel .owl-nav {
+            left: 38%;
+            top: 194px;
+            z-index: 9999 !important;
+        }
+
+        .slide-con {
+            position: absolute;
+            top: 0px;
+            left: 20%;
+            bottom: 0;
+            width: 90%;
+            /* height: 100vh !important; */
+            /* adjust if needed */
+            overflow: hidden;
         }
     </style>
 
@@ -234,77 +279,110 @@
 
     </div>
     <section class="banner" id="banner-sec">
+        <div class="main-banner">
+            <!-- Left Static Section -->
+            <!-- <div class="banner-left">
+            </div> -->
 
-        <div class="container">
-            <div class="row banner-row">
-                <div class="col-md-5">
-
-                    <div class="banner-txt-con">
-                        <h3 class="banner-h3" data-aos="slide-down">
-                            <span class="text-uppercase">From CP's Desk</span>
-                        </h3>
-                        <div class="cp-img">
-                            <img src="assets/images/cp.png" alt="">
-                        </div>
-                        <p class="banner-p" data-aos="slide-up">It is my proud privilege to lead Police Commissionerate
-                            in Twin Cities of
-                            Bhubaneswar and Cuttack. Commissionerate encompasses prestigious Capital City of Bhubaneswar
-                            and millennium City of Cuttack. Growing urbanization, establishment of eminent educational
-                            institutions, spread of service industries have led to vast expansion of the twin City.
-                            <a href="#" class="read-text">Read More >></a>
-                        </p>
-                        <h6 class="dir-name mt-4" data-aos="slide-up">Dr. Suresh Dev Datta Singh, IPS</h6>
-                        <p class="dir-position">Commissioner of Police, Bhubaneswar-Cuttack</p>
+            <!-- Right Slider Section (BROWN ONLY) -->
+            <!-- <div class="banner-right">
+                <div class="brown-slider owl-carousel">
+                    <div class="item">
+                        <img src="assets/images/banner.png" alt="">
                     </div>
-                </div>
-                <div class="col-md-6">
-
-
-                    <div class="slide-con">
-                        <div class="owl-carousel banner-owl-carousel owl-theme">
-                            <div class="item">
-                                <img src="assets/images/banner.png" alt="banner">
-                            </div>
-                            <div class="item">
-                                <img src="assets/images/banner2.png" alt="banner">
-                            </div>
-                        </div>
-
+                    <div class="item">
+                        <img src="assets/images/banner2.png" alt="">
                     </div>
-                    <button id="carouselToggle" class="carousel-btn pause">
-                        ⏸ Pause
-                    </button>
+                    <div class="item">
+                        <img src="assets/images/banner3.png" alt="">
+                    </div>
                 </div>
             </div>
+        </div> -->
 
-        </div>
-        <div class="fixed">
-            <a href="" class="side-button ">
-                <div class="buttonDiv ">
-                    <img src="assets/images/icons/map.svg" alt="map">
+            <div class="container">
+                <div class="row banner-row">
+                    <div class="col-md-5">
+
+                        <div class="banner-txt-con">
+                            <h3 class="banner-h3" data-aos="slide-down">
+                                <span class="text-uppercase">From CP's Desk</span>
+                            </h3>
+                            <div class="cp-img">
+                                <img src="assets/images/cp.png" alt="">
+                            </div>
+                            <p class="banner-p" data-aos="slide-up">It is my proud privilege to lead Police
+                                Commissionerate
+                                in Twin Cities of
+                                Bhubaneswar and Cuttack. Commissionerate encompasses prestigious Capital City of
+                                Bhubaneswar
+                                and millennium City of Cuttack. Growing urbanization, establishment of eminent
+                                educational
+                                institutions, spread of service industries have led to vast expansion of the twin City.
+                                <a href="#" class="read-text">Read More >></a>
+                            </p>
+                            <h6 class="dir-name mt-4" data-aos="slide-up">Dr. Suresh Dev Datta Singh, IPS</h6>
+                            <p class="dir-position">Commissioner of Police, Bhubaneswar-Cuttack</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="slide-con">
+                            <div class="owl-carousel banner-owl-carousel owl-theme">
+                                <div class="item">
+                                    <img src="assets/images/banner.png" alt="banner">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/banner2.png" alt="banner">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/banner3.png" alt="banner">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/banner4.png" alt="banner">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/banner5.png" alt="banner">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/banner6.png" alt="banner">
+                                </div>
+                            </div>
+
+                        </div>
+                        <button id="carouselToggle" class="carousel-btn pause">
+                            ⏸ Pause
+                        </button>
+                    </div>
                 </div>
-            </a>
-            <a href="" class="side-button">
-                <div class="buttonDiv">
-                    <img src="assets/images/icons/book.svg" alt="map">
-                </div>
-            </a>
-            <a href="" class="side-button">
-                <div class="buttonDiv">
-                    <img src="assets/images/icons/traffic.svg" alt="map">
-                </div>
-            </a>
-            <a href="" class="side-button">
-                <div class="buttonDiv">
-                    <img src="assets/images/icons/money.svg" alt="map">
-                </div>
-            </a>
-            <a href="" class="side-button">
-                <div class="buttonDiv">
-                    <img src="assets/images/icons/cyber-criminal.svg" alt="map">
-                </div>
-            </a>
-        </div>
+
+            </div>
+            <div class="fixed">
+                <a href="" class="side-button ">
+                    <div class="buttonDiv ">
+                        <img src="assets/images/icons/map.svg" alt="map">
+                    </div>
+                </a>
+                <a href="" class="side-button">
+                    <div class="buttonDiv">
+                        <img src="assets/images/icons/book.svg" alt="map">
+                    </div>
+                </a>
+                <a href="" class="side-button">
+                    <div class="buttonDiv">
+                        <img src="assets/images/icons/traffic.svg" alt="map">
+                    </div>
+                </a>
+                <a href="" class="side-button">
+                    <div class="buttonDiv">
+                        <img src="assets/images/icons/money.svg" alt="map">
+                    </div>
+                </a>
+                <a href="" class="side-button">
+                    <div class="buttonDiv">
+                        <img src="assets/images/icons/cyber-criminal.svg" alt="map">
+                    </div>
+                </a>
+            </div>
     </section>
     <div class="announcement-container">
         <div class="announcement-icon">

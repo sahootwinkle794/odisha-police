@@ -42,7 +42,7 @@ p {
     height: 100%;
     border-top-left-radius: 31px;
     border-bottom-right-radius: 31px;
-    background: white;
+    background: rgba(255, 255, 255, 0.093);
     z-index: 1;
     overflow: hidden;
     padding: 3px;
@@ -56,8 +56,10 @@ p {
     right: 0;
     bottom: 0;
     padding: 5px;
+    border: none !important;
+    background: none !important;
     /* border thickness */
-    background: linear-gradient(135deg,
+    /* background: linear-gradient(135deg,
             #F15A29 0%,
             #F15A29 15%,
             transparent 30%,
@@ -69,8 +71,8 @@ p {
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+    -webkit-mask-composite: xor; */
+    /* mask-composite: exclude; */
     z-index: -1;
 }
 
@@ -110,12 +112,16 @@ p {
 
 /* Optional: Icons for nav */
 .banner-owl-carousel .owl-nav button.owl-prev::before {
-    content: "↑";
+    content: "←";
+    font-weight: 900;
+    font-size: 20px;
     /* up arrow */
 }
 
 .banner-owl-carousel .owl-nav button.owl-next::before {
-    content: "↓";
+    content: "→";
+    font-weight: 900;
+    font-size: 20px;
     /* down arrow */
 }
 
@@ -232,11 +238,13 @@ a.nav-link.link-dark {
     padding-left: 30px !important;
     padding-right: 30px !important;
 }
+
 .row.banner-row {
     display: flex;
     align-items: center;
     justify-content: space-between !important;
 }
+
 /* top navbar end  */
 /* main navbar start  */
 .search-container {
@@ -488,9 +496,9 @@ a.nav-link.active {
     background-color: #FFF8F4;
     width: 100%;
     background-size: cover;
-    background-position: top;
+    background-position: right;
     background-repeat: no-repeat;
-    padding: 37px 0px;
+    /* padding: 37px 0px; */
 }
 
 .row.banner-row {
@@ -808,7 +816,8 @@ a.link-con:hover {
     filter: brightness(0) invert(1);
 }
 
-.city-card.card:hover p,.city-card.card:hover a {
+.city-card.card:hover p,
+.city-card.card:hover a {
     color: white;
 }
 
@@ -822,9 +831,11 @@ a.learn-p {
     font-size: 12px;
     color: black;
 }
-a.learn-p:hover{
+
+a.learn-p:hover {
     color: yellow !important;
 }
+
 .learn-p {
     position: relative;
     display: inline-flex;
@@ -1969,3 +1980,29 @@ span.insta-text {
 .my-tab-content.active {
     display: block;
 }
+
+/* play and pause start  */
+.carousel-btn {
+    position: relative;
+    margin-top: 343px;
+    margin-left: 125px;
+    padding: 13px 18px;
+    background: #ef3bff;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.carousel-btn.play {
+    background: #2ecc71;
+}
+
+.carousel-btn:hover {
+    opacity: 0.85;
+}
+
+
+/* play and pause end  */
